@@ -1,0 +1,107 @@
+:root {
+  --primary-color: #e0f7ff;
+  --accent-color: #00bcd4;
+  --bg-color: #f0fbff;
+  --text-color: #003344;
+  --card-bg: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.container {
+  background: var(--card-bg);
+  border-radius: 16px;
+  box-shadow: 0 12px 25px rgba(0, 188, 212, 0.2);
+  padding: 30px 40px;
+  max-width: 600px;
+  width: 100%;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--accent-color);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h3 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.info-section {
+  margin: 20px 0;
+}
+
+.info-card {
+  background: var(--primary-color);
+  border-left: 6px solid var(--accent-color);
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: scale(1.03);
+}
+
+.info-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 25px 20px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
